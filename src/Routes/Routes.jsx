@@ -16,16 +16,12 @@ const router = createBrowserRouter(
                     index: true,
                     path: '',
                     Component: Home,
-<<<<<<< HEAD
-                    loader: async () => fetch('/skill.json')
-=======
-                    loader: () => fetch('/skill.json')
->>>>>>> d348886dcd6ff1100cb3735160133790a7695b48
+                    loader: async () => fetch('skill.json')
                 },
                 {
                     path: 'skills/:id',
                     Component: Skill,
-                    loader: async () => fetch('/skill.json')
+                    loader: async () => fetch('skill.json')
                 },
                 {
                     path: '/login',

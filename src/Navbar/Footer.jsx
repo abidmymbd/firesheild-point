@@ -3,7 +3,6 @@ import { Link } from 'react-router';
 
 const Footer = () => {
     return (
-<<<<<<< HEAD
         <footer className="footer sm:footer-horizontal bg-gray-200 flex flex-col md:flex-row justify-between items-center p-3">
             <aside className="grid-flow-row items-center">
                 <Link to='/' className="text-xl font-bold">Firesheild Point</Link>
@@ -12,14 +11,6 @@ const Footer = () => {
                 <p>Contact info</p>
                 <p> Privacy policy</p>
             </section>
-=======
-        <footer className="footer sm:footer-horizontal bg-gray-200 items-center p-3">
-            <aside className="grid-flow-row items-center font-semibold">
-                <Link to='/' className="text-xl font-bold">Firesheild Point</Link>
-                <p>Contact info</p>
-                <p> Privacy policy</p>
-            </aside>
->>>>>>> d348886dcd6ff1100cb3735160133790a7695b48
             <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
                 <a>
                     <svg

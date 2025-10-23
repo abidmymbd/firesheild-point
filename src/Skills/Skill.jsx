@@ -1,25 +1,15 @@
 import React, { useState } from "react";
-<<<<<<< HEAD
 import { IoMdPricetags } from "react-icons/io";
 import { MdStarRate } from "react-icons/md";
-=======
->>>>>>> d348886dcd6ff1100cb3735160133790a7695b48
 import { useLoaderData, useParams } from "react-router";
 
 
 const Skill = () => {
     const { id } = useParams();
-<<<<<<< HEAD
     const data = useLoaderData();
     const skill = data.find((item) => item.skillId === parseInt(id));
 
     const [formData, setFormData] = useState({ name: "", email: "" })
-=======
-    const data = useLoaderData(); // All skills from loader
-    const skill = data.find((item) => item.skillId === parseInt(id));
-
-    const [formData, setFormData] = useState({ name: " ", email: " " })
->>>>>>> d348886dcd6ff1100cb3735160133790a7695b48
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     }
@@ -50,17 +40,10 @@ const Skill = () => {
                     <p className="text-gray-600">{skill.description}</p>
 
                     <div className="flex items-center gap-2 font-semibold">
-<<<<<<< HEAD
                         <span className="flex items-center gap-2"> <MdStarRate /> {skill.rating}</span>
                     </div>
 
                     <p className="text-lg font-bold text-primary flex items-center gap-2"> <IoMdPricetags /> ${skill.price}</p>
-=======
-                        <span>{skill.rating}</span>
-                    </div>
-
-                    <p className="text-lg font-bold text-primary">${skill.price}</p>
->>>>>>> d348886dcd6ff1100cb3735160133790a7695b48
 
                     <div className="space-y-1">
                         <p>
@@ -92,11 +75,7 @@ const Skill = () => {
                             onChange={handleChange}
                             required
                             className="input input-bordered w-full"
-<<<<<<< HEAD
                             placeholder="Your Name"
-=======
-                            placeholder="Your name"
->>>>>>> d348886dcd6ff1100cb3735160133790a7695b48
                         />
                     </div>
 
