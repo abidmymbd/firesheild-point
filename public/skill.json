@@ -1,0 +1,74 @@
+[
+  {
+    "skillId": 1,
+    "skillName": "Beginner Guitar Lessons",
+    "providerName": "Alex Martin",
+    "providerEmail": "alex@skillswap.com",
+    "price": 20,
+    "rating": 4.8,
+    "slotsAvailable": 3,
+    "description": "Acoustic guitar classes for complete beginners.",
+    "image": "https://i.postimg.cc/GpPG8hv5/guitar-class.png",
+    "category": "Music"
+  },
+  {
+    "skillId": 2,
+    "skillName": "Spoken English Practice",
+    "providerName": "Sara Hossain",
+    "providerEmail": "sara@skillswap.com",
+    "price": 10,
+    "rating": 4.6,
+    "slotsAvailable": 5,
+    "description": "Conversational English sessions for non-native speakers.",
+    "image": "https://i.postimg.cc/76s3VqC1/spoken-english.png",
+    "category": "Language"
+  },
+  {
+    "skillId": 3,
+    "skillName": "Web Development Basics",
+    "providerName": "John Carter",
+    "providerEmail": "john@skillswap.com",
+    "price": 30,
+    "rating": 4.9,
+    "slotsAvailable": 4,
+    "description": "Learn HTML, CSS, and JavaScript fundamentals to build responsive websites.",
+    "image": "https://i.postimg.cc/8C7SgqjC/web-development.png",
+    "category": "Technology"
+  },
+  {
+    "skillId": 4,
+    "skillName": "Digital Illustration Workshop",
+    "providerName": "Lina Chowdhury",
+    "providerEmail": "lina@skillswap.com",
+    "price": 25,
+    "rating": 4.7,
+    "slotsAvailable": 2,
+    "description": "Hands-on digital art lessons using Procreate and Photoshop.",
+    "image": "https://i.postimg.cc/VL8Rdncp/digital-art.png",
+    "category": "Design"
+  },
+  {
+    "skillId": 5,
+    "skillName": "Photography Masterclass",
+    "providerName": "David Kim",
+    "providerEmail": "david@skillswap.com",
+    "price": 35,
+    "rating": 4.9,
+    "slotsAvailable": 3,
+    "description": "Comprehensive guide to portrait and landscape photography with DSLR.",
+    "image": "https://i.postimg.cc/zBXxJkTh/photography.png",
+    "category": "Photography"
+  },
+  {
+    "skillId": 6,
+    "skillName": "Baking for Beginners",
+    "providerName": "Maya Rahman",
+    "providerEmail": "maya@skillswap.com",
+    "price": 15,
+    "rating": 4.5,
+    "slotsAvailable": 6,
+    "description": "Learn to bake cakes, cookies, and pastries from scratch.",
+    "image": "https://i.postimg.cc/vZNZc5Wv/baking-class.png",
+    "category": "Cooking"
+  }
+]
