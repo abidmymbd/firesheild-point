@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link, useNavigate } from "react-router";
+import { Link, useLocation, useNavigate } from "react-router";
 import { GoogleAuthProvider, signInWithEmailAndPassword, signInWithPopup } from "firebase/auth";
 import { auth } from "../firebase.config";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -15,6 +15,9 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
     const togglePassword = () => setShowPassword(!showPassword)
 
+    const location = useLocation();
+    const from = location.state?.from || "/";
+
     const handleLogin = (e) => {
         e.preventDefault()
         setError("")
@@ -29,7 +32,7 @@ const Login = () => {
             .then((userCredential) => {
                 const user = userCredential.user;
                 console.log("Logged in user", user);
-                navigate("/");
+                navigate(from, { replace: true });
             })
             .catch((err) => {
                 setError(err.message);
@@ -42,7 +45,7 @@ const Login = () => {
             .then((result) => {
                 const user = result.user;
                 console.log("Login success", user);
-                navigate("/");
+                navigate(from, { replace: true });
             })
             .catch((error) => {
                 console.error("Login error", error);

@@ -22,13 +22,14 @@ const Profile = () => {
             photoURL: newPhoto || user.photoURL,
         })
             .then(() => {
-                alert("Profile updated successfully!");
-                setUser({ ...auth.currentUser });
                 setNewName("");
                 setNewPhoto("");
+
+                window.location.reload();
             })
             .catch((err) => console.log(err));
     };
+
 
     if (!user) {
         return (

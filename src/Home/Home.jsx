@@ -23,7 +23,7 @@ const Home = () => {
             navigate(`/skills/${skillId}`);
         } else {
             alert("Please login first to view details!");
-            navigate("/login");
+            navigate("/login", { state: { from: `/skills/${skillId}` } });
         }
     };
 

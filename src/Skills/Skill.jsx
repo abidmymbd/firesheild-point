@@ -3,30 +3,39 @@ import { IoMdPricetags } from "react-icons/io";
 import { MdStarRate } from "react-icons/md";
 import { useLoaderData, useParams } from "react-router";
 
-
 const Skill = () => {
     const { id } = useParams();
     const data = useLoaderData();
-    const skill = data.find((item) => item.skillId === parseInt(id));
 
-    const [formData, setFormData] = useState({ name: "", email: "" })
+    const skills = Array.isArray(data) ? data : [];
+    const skill = skills.find((item) => item.skillId === parseInt(id));
+
+    const [formData, setFormData] = useState({ name: "", email: "" });
+
     const handleChange = (e) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
-    }
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(`${formData.name}, your booking is confirmed.`)
-        setFormData({ name: "", email: "" })
+        alert(`${formData.name}, your booking is confirmed.`);
+        setFormData({ name: "", email: "" });
+    };
+
+
+    if (!skill) {
+        return (
+            <div className="flex justify-center items-center h-[60vh]">
+                <h2 className="text-2xl font-semibold text-error">
+                    Skill not found 
+                </h2>
+            </div>
+        );
     }
 
-
     return (
-
-
         <div className="my-10">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-
                 <div>
                     <img
                         src={skill.image}
@@ -40,10 +49,14 @@ const Skill = () => {
                     <p className="text-gray-600">{skill.description}</p>
 
                     <div className="flex items-center gap-2 font-semibold">
-                        <span className="flex items-center gap-2"> <MdStarRate /> {skill.rating}</span>
+                        <span className="flex items-center gap-2">
+                            <MdStarRate /> {skill.rating}
+                        </span>
                     </div>
 
-                    <p className="text-lg font-bold text-primary flex items-center gap-2"> <IoMdPricetags /> ${skill.price}</p>
+                    <p className="text-lg font-bold text-primary flex items-center gap-2">
+                        <IoMdPricetags /> ${skill.price}
+                    </p>
 
                     <div className="space-y-1">
                         <p>
@@ -62,7 +75,7 @@ const Skill = () => {
                 </div>
             </div>
 
-            {/* Form */}
+            {/* Booking Form */}
             <div className="bg-base-200 p-6 rounded-xl mt-5">
                 <h3 className="text-2xl font-semibold mb-4">Book Now</h3>
                 <form onSubmit={handleSubmit} className="space-y-4">
@@ -97,8 +110,6 @@ const Skill = () => {
                     </button>
                 </form>
             </div>
-            {/* Form */}
-
         </div>
     );
 };
