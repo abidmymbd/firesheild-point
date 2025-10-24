@@ -5,6 +5,8 @@ import { onAuthStateChanged } from "firebase/auth";
 import { auth } from "../firebase.config";
 import { MdStarRate } from "react-icons/md";
 import { IoMdPricetags } from "react-icons/io";
+import TopProvider from "./TopProvider";
+import HowItWorks from "./HowItWorks";
 
 const Home = () => {
     const data = useLoaderData();
@@ -29,7 +31,7 @@ const Home = () => {
 
     return (
         <div>
-            <Slider />
+            <Slider></Slider>
 
             <div className="my-10 space-y-10">
                 <h2 className="text-3xl font-bold text-center mt-10">Top Skills</h2>
@@ -72,6 +74,12 @@ const Home = () => {
                     ))}
                 </div>
             </div>
+            {/* Top Providers */}
+            <TopProvider></TopProvider>
+            {/* Top Providers */}
+            {/* How it Works */}
+            <HowItWorks></HowItWorks>
+            {/* How it Works */}
         </div>
     );
 };

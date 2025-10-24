@@ -1,0 +1,41 @@
+[
+  {
+    "company": "InMotion Hosting",
+    "image": "https://i.ibb.co.com/4w7bV1LK/images.png",
+    "providerName": "John Carter",
+    "best_for": "Great value, fantastic uptime and support",
+    "features": [
+      "Solid speeds, 99.97% uptime performance",
+      "Live, 24/7 customer support for all plans",
+      "90-day money back guarantee"
+    ],
+    "rating": 9.6,
+    "stars": 5
+  },
+  {
+    "company": "HostGator",
+    "image": "https://i.ibb.co.com/dwCKbQ3C/download.png",
+    "providerName": "Sara Hossain",
+    "best_for": "Low priced plans",
+    "features": [
+      "Incredibly low priced budget plans",
+      "Live chat and phone support 24/7, 365",
+      "45-day money-back guarantee"
+    ],
+    "rating": 9.1,
+    "stars": 4.5
+  },
+  {
+    "company": "1&1 IONOS",
+    "image": "https://i.ibb.co.com/LXVHBYqN/download.png",
+    "providerName": "Alex Martin",
+    "best_for": "Experts who need less support",
+    "features": [
+      "Great prices",
+      "Plenty of storage",
+      "Easily scalable"
+    ],
+    "rating": 8.6,
+    "stars": 4
+  }
+]
