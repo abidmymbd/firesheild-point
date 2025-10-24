@@ -4,6 +4,8 @@ import { auth } from "../firebase.config";
 import { onAuthStateChanged, signOut } from "firebase/auth";
 import userLogo from "../assets/user.png";
 
+import { toast } from 'react-toastify';
+
 const Navbar = () => {
     const [user, setUser] = useState(null);
     const navigate = useNavigate();
@@ -28,7 +30,12 @@ const Navbar = () => {
         if (user) {
             navigate("/profile");
         } else {
-            alert("Please login first to access your profile!");
+            toast.error("Please login first to access your profile!", {
+                position: "top-right",
+                autoClose: 3000,
+                pauseOnHover: true,
+                draggable: true,
+            });
             navigate("/login", { state: { from: "/profile" } });
         }
     };
@@ -72,7 +79,7 @@ const Navbar = () => {
                         </li>
                     </ul>
                 </div>
-                <Link to="/" className="text-xl font-bold">
+                <Link to="/" className="text-3xl font-bold text-[#3f4d93]">
                     Firesheild Point
                 </Link>
             </div>

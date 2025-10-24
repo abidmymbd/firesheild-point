@@ -5,6 +5,7 @@ import Profile from "../Profile/Profile";
 import Skill from "../Skills/Skill";
 import Login from "../Login and SignUp/Login";
 import SignUp from "../Login and SignUp/SignUp";
+import ForgotPassword from "../Login and SignUp/ForgotPassword";
 
 const router = createBrowserRouter([
     {
@@ -15,7 +16,7 @@ const router = createBrowserRouter([
                 index: true,
                 path: "",
                 Component: Home,
-                loader: async () => (await fetch("/skill.json")).json(), 
+                loader: async () => (await fetch("/skill.json")).json(),
             },
             {
                 path: "skills/:id",
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
                 path: "login",
                 Component: Login,
             },
+            // {
+            //     path: "forgotpass",
+            //     Component: ForgotPassword,
+            // },
             {
                 path: "signup",
                 Component: SignUp,
@@ -35,6 +40,10 @@ const router = createBrowserRouter([
                 Component: Profile,
             },
         ],
+    },
+    {
+        path: "forgotpass",
+        Component: ForgotPassword,
     },
 ]);
 

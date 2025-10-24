@@ -5,13 +5,13 @@ const Footer = () => {
     return (
         <footer className="footer sm:footer-horizontal bg-gray-200 flex flex-col md:flex-row justify-between items-center p-3">
             <aside className="grid-flow-row items-center">
-                <Link to='/' className="text-xl font-bold">Firesheild Point</Link>
+                <Link to='/' className="text-xl font-bold text-[#3f4d93]">Firesheild Point</Link>
             </aside>
             <section className="grid-flow-row items-center font-semibold">
                 <p>Contact info</p>
                 <p> Privacy policy</p>
             </section>
-            <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+            <nav className="grid-flow-col gap-4 md:place-self-center md:justify-self-end text-[#3f4d93]">
                 <a>
                     <svg
                         xmlns="http://www.w3.org/2000/svg"

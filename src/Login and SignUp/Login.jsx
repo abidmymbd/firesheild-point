@@ -18,6 +18,14 @@ const Login = () => {
     const location = useLocation();
     const from = location.state?.from || "/";
 
+    // // Forgot Password  //
+    const [email, setEmail] = useState("")
+
+    const handleForgotPassword = () => {
+        navigate("/forgotpass", { state: { email } });
+    };
+    // // Forgot Password  //
+
     const handleLogin = (e) => {
         e.preventDefault()
         setError("")
@@ -69,6 +77,7 @@ const Login = () => {
                                     name="email"
                                     className="input input-bordered w-full"
                                     placeholder="Email"
+                                    onChange={(e) => setEmail(e.target.value)}
                                     required
                                 />
                             </div>
@@ -92,7 +101,9 @@ const Login = () => {
 
 
                             <div>
-                                <a className="link link-hover">Forgot password?</a>
+                                <button onClick={handleForgotPassword} to='/forgotpass' className="link link-hover">
+                                    Forgot password?
+                                </button>
                             </div>
 
                             {error && <p className="text-red-500 mt-2">{error}</p>}

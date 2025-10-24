@@ -7,6 +7,7 @@ import { MdStarRate } from "react-icons/md";
 import { IoMdPricetags } from "react-icons/io";
 import TopProvider from "./TopProvider";
 import HowItWorks from "./HowItWorks";
+import 'animate.css';
 
 const Home = () => {
     const data = useLoaderData();
@@ -34,7 +35,7 @@ const Home = () => {
             <Slider></Slider>
 
             <div className="my-10 space-y-10">
-                <h2 className="text-3xl font-bold text-center mt-10">Top Skills</h2>
+                <h2 className="text-3xl font-bold text-center mt-10 animate__animated hover:animate__headShake">Top Skills</h2>
 
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                     {data.map((skill) => (

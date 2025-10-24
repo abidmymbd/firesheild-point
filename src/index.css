@@ -1,2 +1,8 @@
 @import "tailwindcss";
 @plugin "daisyui";
+
+.animate__animated:hover {
+  animation-name: headShake;
+  animation-duration: 1s;
+  color: rgb(116, 19, 19);
+}

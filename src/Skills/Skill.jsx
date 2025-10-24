@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { IoMdPricetags } from "react-icons/io";
 import { MdStarRate } from "react-icons/md";
 import { useLoaderData, useParams } from "react-router";
+import { toast } from "react-toastify";
 
 const Skill = () => {
     const { id } = useParams();
@@ -18,7 +19,12 @@ const Skill = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        alert(`${formData.name}, your booking is confirmed.`);
+        toast.success(`${formData.name}, your booking is confirmed.`, {
+            position: "top-right",
+            autoClose: 3000,
+            pauseOnHover: true,
+            draggable: true,
+        })
         setFormData({ name: "", email: "" });
     };
 
@@ -27,7 +33,7 @@ const Skill = () => {
         return (
             <div className="flex justify-center items-center h-[60vh]">
                 <h2 className="text-2xl font-semibold text-error">
-                    Skill not found 
+                    Skill not found
                 </h2>
             </div>
         );
