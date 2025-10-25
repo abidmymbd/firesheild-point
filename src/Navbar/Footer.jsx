@@ -3,7 +3,7 @@ import { Link } from 'react-router';
 
 const Footer = () => {
     return (
-        <footer className="footer sm:footer-horizontal bg-gray-200 flex flex-col md:flex-row justify-between items-center p-3">
+        <footer className="footer sm:footer-horizontal bg-gray-200 flex flex-col md:flex-row justify-between items-center p-3 py-10">
             <aside className="grid-flow-row items-center">
                 <Link to='/' className="text-xl font-bold text-[#3f4d93]">Firesheild Point</Link>
             </aside>

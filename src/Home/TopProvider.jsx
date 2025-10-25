@@ -29,9 +29,9 @@ const TopProvider = () => {
                         <img
                             src={provider.image}
                             alt={provider.company}
-                            className="w-40 md:w-70 bg-cover h-30 rounded-xl object-cover mr-10"/>
+                            className="w-40 md:w-70 bg-cover h-30 rounded-xl object-cover mr-10" />
 
-                        <div data-aos="zoom-in"  className="flex-1">
+                        <div data-aos="zoom-in" className="flex-1">
                             <h3 className="text-xl font-bold text-gray-900">
                                 {provider.company}
                             </h3>

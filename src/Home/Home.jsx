@@ -8,6 +8,7 @@ import { IoMdPricetags } from "react-icons/io";
 import TopProvider from "./TopProvider";
 import HowItWorks from "./HowItWorks";
 import 'animate.css';
+import WhyChooseUs from "../WhyChooseUs/WhyChooseUs";
 
 const Home = () => {
     const data = useLoaderData();
@@ -75,12 +76,18 @@ const Home = () => {
                     ))}
                 </div>
             </div>
+
             {/* Top Providers */}
             <TopProvider></TopProvider>
             {/* Top Providers */}
+
             {/* How it Works */}
             <HowItWorks></HowItWorks>
             {/* How it Works */}
+
+            {/* Why Choose Us */}
+            <WhyChooseUs></WhyChooseUs>
+            {/* Why Choose Us */}
         </div>
     );
 };
